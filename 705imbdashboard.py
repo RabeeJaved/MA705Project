@@ -281,7 +281,7 @@ movThr1 = movThr1.rename(columns= {0: 'IMDbID', 1: 'Genre', 2: 'Released', 3: 'T
 
 #  --------------------------------------------------------------------
 
-# Dataframe year 2015-2020, Comedy
+'''# Dataframe year 2015-2020, Comedy
 
 url = 'https://ott-details.p.rapidapi.com/advancedsearch'
 
@@ -540,7 +540,7 @@ movThr2 = movThr2.rename(columns= {0: 'IMDbID', 1: 'Genre', 2: 'Released', 3: 'T
 movCom1 = movCom1.append(movCom2)
 movDra1 = movDra1.append(movDra2)
 movAct1 = movAct1.append(movAct2)
-movThr1 = movThr1.append(movThr2)
+movThr1 = movThr1.append(movThr2)'''
 
 movieDF = movCom1
 movieDF = movieDF.append(movDra1)
@@ -548,12 +548,10 @@ movieDF = movieDF.append(movAct1)
 movieDF = movieDF.append(movThr1)
 
 
-
 # CODE BEGINS:-
 
-url = 'https://github.com/RabeeJaved/MA705Project/blob/main/movieDataset.csv'
-movieDF = pd.read_csv(url, sep = ",")
-movieDF = movieDF.drop(columns= ['ImageURL', 'Synopsis'])
+movieD = pd.read_csv('movieDataset.csv')
+movieDF = movieD.drop(columns= ['ImageURL', 'Synopsis'])
 
 
 for x in range(0, len(movieDF)):
