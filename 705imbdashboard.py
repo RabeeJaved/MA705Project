@@ -39,7 +39,7 @@ querystring = {"start_year": 2010,
                "no_of_votes": "2000"}
 
 headers = {
-    'x-rapidapi-key': "ac044f5f44mshf2818ed66358b97p1844adjsn5591556189aa",
+    'x-rapidapi-key': "6b3a0fdf7bmsh73229e4a36d7ae2p173e81jsn46961ddffbc8",
     'x-rapidapi-host': "ott-details.p.rapidapi.com"
     }
 
