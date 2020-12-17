@@ -1,1 +1,1 @@
-web: gunicorn 705imdbdashboard:server
+web: gunicorn 705imbdashboard:server
