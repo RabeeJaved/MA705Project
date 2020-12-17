@@ -25,12 +25,12 @@ cols = ['IMDbID', 'Genre', 'Released', 'Title', 'IMDbRating', 'Type', 'Synopsis'
 movieDF = pd.DataFrame(columns = cols)
 
 
-# Dataframe year 2010-2014, Comedy
+# Dataframe year 2010-2020, Comedy
 
 url = 'https://ott-details.p.rapidapi.com/advancedsearch'
 
 querystring = {"start_year": 2010, 
-               "end_year": 2014,
+               "end_year": 2020,
                "max_imdb": 9.5, 
                "type": "movie",
                "genre": "comedy",
@@ -93,7 +93,7 @@ movCom1 = movCom1.rename(columns= {0: 'IMDbID', 1: 'Genre', 2: 'Released', 3: 'T
 url = 'https://ott-details.p.rapidapi.com/advancedsearch'
 
 querystring = {"start_year": 2010, 
-               "end_year": 2014,
+               "end_year": 2020,
                "max_imdb": 9.5, 
                "type": "movie",
                "genre": "drama",
@@ -151,12 +151,12 @@ for n in range(0, len(strires)):
 movDra1 = movDra1.rename(columns= {0: 'IMDbID', 1: 'Genre', 2: 'Released', 3: 'Title', 4: 'IMDbRating', 5: 'Type', 6: 'Synopsis', 7: 'ImageURL'})
 
 
-# Dataframe year 2010-2014, Action
+# Dataframe year 2010-2020, Action
 
 url = 'https://ott-details.p.rapidapi.com/advancedsearch'
 
 querystring = {"start_year": 2010, 
-               "end_year": 2014,
+               "end_year": 2020,
                "max_imdb": 9.5, 
                "type": "movie",
                "genre": "action",
@@ -215,12 +215,12 @@ movAct1 = movAct1.rename(columns= {0: 'IMDbID', 1: 'Genre', 2: 'Released', 3: 'T
 
 
 
-# Dataframe year 2010-2014, Thriller
+# Dataframe year 2010-2020, Thriller
 
 url = 'https://ott-details.p.rapidapi.com/advancedsearch'
 
 querystring = {"start_year": 2010, 
-               "end_year": 2014,
+               "end_year": 2020,
                "max_imdb": 9.5, 
                "type": "movie",
                "genre": "thriller",
@@ -548,11 +548,12 @@ movieDF = movieDF.append(movAct1)
 movieDF = movieDF.append(movThr1)
 
 
-# CODE BEGINS:-
+# APP CODE BEGINS:-
 
-url = 'https://github.com/RabeeJaved/MA705Project/blob/main/movieDataset.csv'
-movieD = pd.read_csv(url, sep=',')
-movieDF = movieD.drop(columns= ['ImageURL', 'Synopsis'])
+'''url = 'https://github.com/RabeeJaved/MA705Project/blob/main/movieDataset.csv'
+movieD = pd.read_csv(url, sep=',')'''
+
+movieDF = movieDF.drop(columns= ['ImageURL', 'Synopsis'])
 
 
 for x in range(0, len(movieDF)):
