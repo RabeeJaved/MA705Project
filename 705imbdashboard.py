@@ -550,7 +550,8 @@ movieDF = movieDF.append(movThr1)
 
 # CODE BEGINS:-
 
-movieD = pd.read_csv('movieDataset.csv')
+url = 'https://github.com/RabeeJaved/MA705Project/blob/main/movieDataset.csv'
+movieD = pd.read_csv(url, sep=',')
 movieDF = movieD.drop(columns= ['ImageURL', 'Synopsis'])
 
 
